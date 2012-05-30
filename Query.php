@@ -183,11 +183,34 @@ class phpDataMapper_Query implements Countable, IteratorAggregate
 		return $params;
 	}
 	
+
+
+/*	
+// ===========================================================
+// SPL Array Access
+// ===========================================================
+	public function offsetExists($offset) {
+		if ($this->item($offset) !== false) return true;
+		return false;
+	}
+	
+	public function offsetGet($offset) {
+		if ($offset == 0) return $this->first();
+		return $this->item($offset);
+	}
+
+	public function offsetSet($offset, $value) {
+		throw new ReadOnlyAccess('DBRecordCollection items are read only.');
+	}
+
+	public function offsetUnset($offset) {
+		throw new ReadOnlyAccess('DBRecordCollection items are read only.');
+	}
+*/
 	
 	
-	
-	
-	// ===================================================================
+// ===========================================================
+// ===========================================================
 	
 	/**
 	 * SPL Countable function

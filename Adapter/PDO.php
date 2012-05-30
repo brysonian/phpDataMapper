@@ -221,6 +221,10 @@ abstract class phpDataMapper_Adapter_PDO implements phpDataMapper_Adapter_Interf
 		foreach($formattedFields as $fieldName => $fieldInfo) {
 			$columnsSyntax[$fieldName] = $this->migrateSyntaxFieldUpdate($fieldName, $fieldInfo, true);
 		}
+
+		foreach($formattedFields as $fieldName => $fieldInfo) {
+			$columnsSyntax[$fieldName] = $this->migrateSyntaxFieldUpdate($fieldName, $fieldInfo, true);
+		}
 		
 		// Get syntax for table with fields/columns
 		if ( !empty($columnsSyntax) ) {

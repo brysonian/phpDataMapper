@@ -498,7 +498,6 @@ class phpDataMapper_Base
 					} elseif(is_array($relatedRow)) {
 						$relatedRowObj = new $this->_entityClass($relatedRow);
 					}
-					
 					// Set column values on row only if other data has been updated (prevents queries for unchanged existing rows)
 					if(count($relatedRowObj->dataModified()) > 0) {
 						$fillData = array_merge($relatedObj->foreignKeys(), $fillData);
@@ -593,7 +592,7 @@ class phpDataMapper_Base
 		
 		// Save related rows
 		if($result) {
-			$this->saveRelatedRowsFor($entity);
+			//$this->saveRelatedRowsFor($entity);
 		}
 		
 		return $result;
@@ -623,7 +622,7 @@ class phpDataMapper_Base
 		
 		// Save related rows
 		if($result) {
-			$this->saveRelatedRowsFor($entity);
+			//$this->saveRelatedRowsFor($entity);
 		}
 		
 		return $result;
