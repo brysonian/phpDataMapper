@@ -534,6 +534,8 @@ class phpDataMapper_Base
 			$pk = $this->primaryKey($entity);
 			// No primary key, insert
 			if(empty($pk)) {
+				// CBM update created_at
+				$entity->created_at	= date($this->adapter()->dateTimeFormat());
 				$result = $this->insert($entity);
 			// Has primary key, update
 			} else {
